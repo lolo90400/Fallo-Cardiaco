@@ -1,0 +1,1 @@
+PARTE1: Se carga el dataset, se crea una array con ' age ' y promediamos las edades con una funcion de numpy
