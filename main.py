@@ -28,6 +28,26 @@ print(F"El promedio de la edad de las  personas muertas es: {round(promedio_df_1
 promedio_df_2 = df_2["age"].mean()
 print(f" El promedio de la edad de las personas vivas es: {round(promedio_df_2,2)}")
 
+# PARTE 3
+
+print(df.dtypes)
+
+df['is_dead'] = df['is_dead'].astype(bool)
+
+print(df.dtypes)
+print(df["is_dead"].head())
+
+df_agrupado = df.groupby(['is_male', 'is_smoker']).size().reset_index(name='count')
+
+print(df_agrupado)
+
+conteo_fumadoras = df_agrupado.loc[(df_agrupado['is_male'] == False) & (df_agrupado['is_smoker'] == True), 'count'].values
+conteo_fumadores = df_agrupado.loc[(df_agrupado['is_male'] == True) & (df_agrupado['is_smoker'] == True), 'count'].values
+
+print("Cantidad de mujeres fumadoras:", conteo_fumadoras[0] if len(conteo_fumadoras) > 0 else 0)
+print("Cantidad de hombres fumadores:", conteo_fumadores[0] if len(conteo_fumadores) > 0 else 0)
+
+
 
 
 
