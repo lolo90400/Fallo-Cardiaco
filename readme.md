@@ -15,3 +15,5 @@ PARTE 7 : Creacion de graficos en " graficos.py"
 PARTE 8 : Creacion de graficos estilo torta
 
 PARTE 9: Analicis distribuciones 
+
+PARTE 10 :La predicción y el proceso se encuentra en "regresion_lineal.py"
