@@ -5,3 +5,5 @@ PARTE 2: Se paso de un array a un data frame de pandas, luego creamos dos column
 PARTE 3 : Verificamos los tipos de datos sean correctos y calculamos la cantidad de hombre y mujeres fumadores
 
 PARTE 4 : Realize un GET para descargar y escribir la respuesta como un archivo de texto y agrupe todo en un funcion con URL
+
+PARTE 5 : Seguimos trabajando y verificando usando pandas que no existan valores faltantes, que no existan filas repetidas, verificar valores atipicos y elimarlos y crear una categoria que categorice por edades
