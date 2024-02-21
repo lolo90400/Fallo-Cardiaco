@@ -17,3 +17,5 @@ PARTE 8 : Creacion de graficos estilo torta
 PARTE 9: Analicis distribuciones 
 
 PARTE 10 :La predicción y el proceso se encuentra en "regresion_lineal.py"
+
+PARTE 11 : Se desarrollo la clasificacion en " clasificacion.py"
