@@ -13,3 +13,5 @@ PARTE 6 : La parte 6 del proyecto se encuentra en " automatico.py "
 PARTE 7 : Creacion de graficos en " graficos.py"
 
 PARTE 8 : Creacion de graficos estilo torta
+
+PARTE 9: Analicis distribuciones 

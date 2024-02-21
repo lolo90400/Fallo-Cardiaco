@@ -94,3 +94,46 @@ fig.suptitle('Diagramas de Torta por Característica', fontsize=16)
 
 fig.savefig('graficos_tortas.png')
 plt.show()
+
+#Parte 9
+
+
+
+X = df.drop(columns=['DEATH_EVENT', 'age']).values
+
+
+y = df['DEATH_EVENT'].values
+
+
+X_embedded = TSNE(
+    n_components=3,
+    learning_rate='auto',
+    init='random',
+    perplexity=3
+).fit_transform(X)
+
+
+fig = go.Figure()
+
+for label in set(y):
+    indices = y == label
+    scatter = go.Scatter3d(
+        x=X_embedded[indices, 0],
+        y=X_embedded[indices, 1],
+        z=X_embedded[indices, 2],
+        mode='markers',
+        marker=dict(size=8, opacity=0.6),
+        name=f'Clase {label}'
+    )
+    fig.add_trace(scatter)
+
+
+fig.update_layout(scene=dict(
+                    xaxis_title='Dimensión 1',
+                    yaxis_title='Dimensión 2',
+                    zaxis_title='Dimensión 3'),
+                    width=800, height=800,
+                    margin=dict(l=0, r=0, b=0, t=0))
+
+
+fig.write_html('scatter_3d_plotly.html')  
