@@ -37,7 +37,8 @@ def ajustar_arbol_decision_1(X_train, X_test, y_train, y_test):
     print(matriz_confusion)
 
     
-
+#PARTE 12
+    
 
 def graficar_distribucion_clases_2(df):
    
