@@ -9,3 +9,6 @@ PARTE 4 : Realize un GET para descargar y escribir la respuesta como un archivo 
 PARTE 5 : Seguimos trabajando y verificando usando pandas que no existan valores faltantes, que no existan filas repetidas, verificar valores atipicos y elimarlos y crear una categoria que categorice por edades
 
 PARTE 6 : La parte 6 del proyecto se encuentra en " automatico.py " 
+
+PARTE 7 : Creacion de graficos en " graficos.py"
+
