@@ -47,6 +47,28 @@ conteo_fumadores = df_agrupado.loc[(df_agrupado['is_male'] == True) & (df_agrupa
 print("Cantidad de mujeres fumadoras:", conteo_fumadoras[0] if len(conteo_fumadoras) > 0 else 0)
 print("Cantidad de hombres fumadores:", conteo_fumadores[0] if len(conteo_fumadores) > 0 else 0)
 
+# PARTE 4
+
+import requests
+
+def descargar_y_guardar_csv(url, nombre_archivo):
+    
+    response = requests.get(url)
+
+    
+    if response.status_code == 200:
+       
+        with open(nombre_archivo, 'w', encoding='utf-8') as archivo:
+            archivo.write(response.text)
+        print(f"Datos descargados y guardados en {nombre_archivo}")
+    else:
+        print(f"Error en la solicitud: {response.status_code}")
+
+
+url_datos = "https://huggingface.co/datasets/mstz/heart_failure/raw/main/heart_failure_clinical_records_dataset.csv"
+
+
+descargar_y_guardar_csv(url_datos, "datos_descargados.csv")
 
 
 
